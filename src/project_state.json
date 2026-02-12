@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a playful Valentine’s proposal webpage for Palak with Yes/No options, where clicking No progressively shrinks the No button until Yes is chosen; clicking Yes displays a large celebratory message.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Seamless cute heart pattern background, soft warm palette (valentine-bg.dim_1920x1080.png)\n- Single large hand-drawn heart doodle with subtle shading, transparent background (heart-doodle.dim_512x512.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-valentine-proposal-ui-that-asks-palak-to-be-the-user-s-valentine-with-two-prominent-buttons-labeled-yes-and-no",
+      "title": "Create a single-page Valentine proposal UI that asks Palak to be the user's Valentine, with two prominent buttons labeled \"Yes\" and \"No\".",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-no-button-interaction-each-time-no-is-clicked-the-no-button-progressively-shrinks-until-it-becomes-extremely-small-making-it-difficult-to-click-compared-to-yes",
+      "title": "Implement the \"No\" button interaction: each time \"No\" is clicked, the \"No\" button progressively shrinks until it becomes extremely small, making it difficult to click compared to \"Yes\".",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-yes-button-interaction-when-yes-is-clicked-replace-the-prompt-buttons-or-clearly-transition-the-ui-to-show-a-large-celebratory-message-yayyyy-i-loveeeeeee-youuuuuuuu",
+      "title": "Implement the \"Yes\" button interaction: when \"Yes\" is clicked, replace the prompt/buttons (or clearly transition the UI) to show a large celebratory message: \"YAYYYY I LOVEEEEEEE YOUUUUUUUU\".",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-playful-valentine-themed-visual-design-colors-typography-spacing-and-layout-consistently-across-the-page-without-using-a-blue-purple-primary-palette",
+      "title": "Apply a coherent, playful Valentine-themed visual design (colors, typography, spacing, and layout) consistently across the page without using a blue/purple primary palette.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-generated-images-into-the-app-as-static-assets-under-frontend-public-assets-generated-and-use-them-in-the-valentine-page-layout",
+      "title": "Add the required generated images into the app as static assets under frontend/public/assets/generated and use them in the Valentine page layout.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a Valentine proposal webpage for Palak with Yes/No buttons; clicking No progressively shrinks the No button, and clicking Yes shows large text \"YAYYYY I LOVEEEEEEE YOUUUUUUUU\".",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Playful Valentine proposal page for Palak with shrinking No button and celebratory Yes message",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

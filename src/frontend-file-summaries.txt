@@ -1,0 +1,6 @@
+{
+  "frontend/src/App.tsx": "Main app component that renders the ValentineProposalPage as the single-page application root.",
+  "frontend/src/pages/ValentineProposalPage.tsx": "Valentine proposal page component with interactive Yes/No buttons where the No button progressively shrinks on each click and clicking Yes displays a celebratory message with the exact text \"YAYYYY I LOVEEEEEEE YOUUUUUUUU\".",
+  "frontend/src/index.css": "Global stylesheet with Valentine-themed OKLCH color system using warm reds, pinks, and creams for both light and dark modes, plus custom utility classes for Valentine colors.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Valentine color palette tokens, Poppins display font, and custom theme utilities for the romantic aesthetic."
+}

@@ -1,0 +1,107 @@
+{
+  "kind": "build_request",
+  "title": "Playful Valentine proposal page for Palak with shrinking No button and celebratory Yes message",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a single-page Valentine proposal UI that asks Palak to be the user's Valentine, with two prominent buttons labeled \"Yes\" and \"No\".",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "i want a website where i ask the person named palak to be my valentine and there are two options yes and no"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The page displays a clear prompt addressed to \"Palak\" asking her to be the user's Valentine.",
+        "Two buttons are visible: \"Yes\" and \"No\".",
+        "All user-facing text is in English."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the \"No\" button interaction: each time \"No\" is clicked, the \"No\" button progressively shrinks until it becomes extremely small, making it difficult to click compared to \"Yes\".",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "whenever she clicks on no the button gets smaller to a point where she has to click yes"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking \"No\" reduces the button size on each click (e.g., scaling down step-by-step).",
+        "The \"No\" button continues shrinking on repeated clicks and never grows as a result of clicking \"No\".",
+        "The page remains usable (no layout-breaking overflow or jitter) as the \"No\" button shrinks."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement the \"Yes\" button interaction: when \"Yes\" is clicked, replace the prompt/buttons (or clearly transition the UI) to show a large celebratory message: \"YAYYYY I LOVEEEEEEE YOUUUUUUUU\".",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "when the yes is clicked show a big text \"YAYYYY I LOVEEEEEEE YOUUUUUUUU\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking \"Yes\" displays the exact text: \"YAYYYY I LOVEEEEEEE YOUUUUUUUU\" (matching capitalization and spelling).",
+        "The message is visually large and clearly the primary content on the screen.",
+        "After clicking \"Yes\", the user can no longer trigger the shrinking \"No\" behavior (buttons are hidden/disabled or the view has transitioned)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Apply a coherent, playful Valentine-themed visual design (colors, typography, spacing, and layout) consistently across the page without using a blue/purple primary palette.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The page uses a consistent Valentine aesthetic (e.g., warm reds/pinks/creams, romantic typography choices, soft shadows).",
+        "The design is responsive and looks good on both mobile and desktop.",
+        "Primary styling does not use blue/purple as the dominant theme colors."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add the required generated images into the app as static assets under frontend/public/assets/generated and use them in the Valentine page layout.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The specified image files exist under frontend/public/assets/generated.",
+        "The page visually incorporates the generated images (e.g., as a background/decoration) without fetching them from the backend."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Do not add additional backend services; keep the app frontend-only unless explicitly required.",
+    "Use English for all user-facing text."
+  ],
+  "nonGoals": [
+    "User accounts, Internet Identity login, or any authentication flow.",
+    "Persisting choices or analytics.",
+    "Sending messages, emails, notifications, or any real-time communication."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Seamless cute heart pattern background, soft warm palette (valentine-bg.dim_1920x1080.png)",
+      "Single large hand-drawn heart doodle with subtle shading, transparent background (heart-doodle.dim_512x512.png)"
+    ],
+    "edits": []
+  }
+}

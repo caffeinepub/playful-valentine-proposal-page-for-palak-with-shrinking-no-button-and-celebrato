@@ -1,0 +1,111 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Playful Valentine proposal page for Palak (single page with shrinking No + celebratory Yes)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a single-page Valentine proposal UI addressed to Palak with prominent Yes/No buttons.",
+      "acceptanceCriteria": [
+        "The page displays a clear prompt addressed to \"Palak\" asking her to be the user's Valentine.",
+        "Two buttons are visible: \"Yes\" and \"No\".",
+        "All user-facing text is in English."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the app root component that renders the single Valentine proposal page view (no additional routes/pages)."
+        },
+        {
+          "path": "frontend/src/pages/ValentineProposalPage.tsx",
+          "operation": "create",
+          "description": "Create the single-page UI with the prompt addressed to Palak and two prominent actions. Use the shadcn-ui Button component for consistent button styling and accessibility. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement progressive shrinking behavior for the No button on each click without breaking layout.",
+      "acceptanceCriteria": [
+        "Clicking \"No\" reduces the button size on each click (e.g., scaling down step-by-step).",
+        "The \"No\" button continues shrinking on repeated clicks and never grows as a result of clicking \"No\".",
+        "The page remains usable (no layout-breaking overflow or jitter) as the \"No\" button shrinks."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ValentineProposalPage.tsx",
+          "operation": "modify",
+          "description": "Add state-driven progressive scaling for the \"No\" button (e.g., decrement scale per click with a defined minimum), apply transform-based sizing to avoid layout jitter, and keep the surrounding layout stable as it shrinks. Use the shadcn-ui Button component as the base button element. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement Yes interaction that transitions the UI to a large celebratory message and prevents further No interaction.",
+      "acceptanceCriteria": [
+        "Clicking \"Yes\" displays the exact text: \"YAYYYY I LOVEEEEEEE YOUUUUUUUU\" (matching capitalization and spelling).",
+        "The message is visually large and clearly the primary content on the screen.",
+        "After clicking \"Yes\", the user can no longer trigger the shrinking \"No\" behavior (buttons are hidden/disabled or the view has transitioned)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ValentineProposalPage.tsx",
+          "operation": "modify",
+          "description": "Add a \"celebration\" view state triggered by clicking \"Yes\" that replaces (or clearly transitions away from) the prompt/buttons and renders the exact celebratory message as the primary, large content; ensure the \"No\" shrink interaction cannot be triggered after transition."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a coherent playful Valentine-themed design (warm reds/pinks/creams) that is responsive and avoids blue/purple primary styling.",
+      "acceptanceCriteria": [
+        "The page uses a consistent Valentine aesthetic (e.g., warm reds/pinks/creams, romantic typography choices, soft shadows).",
+        "The design is responsive and looks good on both mobile and desktop.",
+        "Primary styling does not use blue/purple as the dominant theme colors."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create the stylesheet imported by frontend/src/main.tsx to ensure Tailwind base/components/utilities are applied and to host any Valentine-specific base overrides needed by the single page (keeping a warm red/pink/cream palette and avoiding blue/purple as primary)."
+        },
+        {
+          "path": "frontend/index.css",
+          "operation": "modify",
+          "description": "Adjust global CSS variables/theme tokens to align with a Valentine palette (warm reds/pinks/creams) and ensure the primary styling is not blue/purple; keep typography/spacing/shadows coherent with the single-page layout."
+        },
+        {
+          "path": "frontend/src/pages/ValentineProposalPage.tsx",
+          "operation": "modify",
+          "description": "Implement responsive layout and Valentine styling (typography, spacing, soft shadows) using Tailwind classes; ensure mobile/desktop presentation remains visually balanced without introducing blue/purple as dominant colors."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add the required generated images as static assets and incorporate them into the Valentine page layout.",
+      "acceptanceCriteria": [
+        "The specified image files exist under frontend/public/assets/generated.",
+        "The page visually incorporates the generated images (e.g., as a background/decoration) without fetching them from the backend."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/valentine-bg.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the generated seamless cute heart pattern background image asset at the required path for static use by the Valentine page."
+        },
+        {
+          "path": "frontend/public/assets/generated/heart-doodle.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated hand-drawn heart doodle image asset (transparent background) at the required path for static use by the Valentine page."
+        },
+        {
+          "path": "frontend/src/pages/ValentineProposalPage.tsx",
+          "operation": "modify",
+          "description": "Wire the static assets into the layout by using frontend/public/assets/generated/valentine-bg.dim_1920x1080.png as a decorative background and frontend/public/assets/generated/heart-doodle.dim_512x512.png as an on-page decoration (e.g., near the prompt/celebration), ensuring assets are loaded statically (no backend fetching)."
+        }
+      ]
+    }
+  ]
+}

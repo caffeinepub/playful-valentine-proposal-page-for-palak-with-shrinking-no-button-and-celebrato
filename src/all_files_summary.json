@@ -1,0 +1,15 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods.",
+  "feature_evidence.json": "Feature evidence report mapping Valentine UI features to involved files and components.",
+  "frontend-file-summaries.txt": "Text file listing brief summaries of key frontend files.",
+  "frontend/index.css": "Tailwind base styles defining OKLCH color variables and Valentine-themed palette.",
+  "frontend/index.html": "HTML entry point loading the React app and mounting root element.",
+  "frontend/src/App.tsx": "Root React component rendering the ValentineProposalPage.",
+  "frontend/src/hooks/useActor.ts": "React hook creating and managing authenticated or anonymous backend actors.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Internet Identity auth context and provider handling login, identity persistence, and state.",
+  "frontend/src/index.css": "Global Valentine-themed OKLCH color system and typography configuration for the app.",
+  "frontend/src/main.tsx": "React entry point setting up providers and rendering the App.",
+  "frontend/src/pages/ValentineProposalPage.tsx": "Valentine proposal UI with shrinking No button, celebratory Yes message, and themed assets.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom color tokens, typography, container settings, animations, and extended theme values for a Valentine‑styled UI.",
+  "project_state.json": "Stores project metadata and requirements for building a Valentine proposal page featuring Yes/No interactions and themed design assets."
+}

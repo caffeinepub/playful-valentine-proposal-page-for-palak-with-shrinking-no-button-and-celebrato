@@ -1,0 +1,98 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-single-page-valentine-proposal-ui-that-asks-palak-to-be-the-user-s-valentine-with-two-prominent-buttons-labeled-yes-and-no",
+      "featureTitle": "Create a single-page Valentine proposal UI that asks Palak to be the user's Valentine, with two prominent buttons labeled \"Yes\" and \"No\".",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/ValentineProposalPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-no-button-interaction-each-time-no-is-clicked-the-no-button-progressively-shrinks-until-it-becomes-extremely-small-making-it-difficult-to-click-compared-to-yes",
+      "featureTitle": "Implement the \"No\" button interaction: each time \"No\" is clicked, the \"No\" button progressively shrinks until it becomes extremely small, making it difficult to click compared to \"Yes\".",
+      "files": [
+        "frontend/src/pages/ValentineProposalPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-yes-button-interaction-when-yes-is-clicked-replace-the-prompt-buttons-or-clearly-transition-the-ui-to-show-a-large-celebratory-message-yayyyy-i-loveeeeeee-youuuuuuuu",
+      "featureTitle": "Implement the \"Yes\" button interaction: when \"Yes\" is clicked, replace the prompt/buttons (or clearly transition the UI) to show a large celebratory message: \"YAYYYY I LOVEEEEEEE YOUUUUUUUU\".",
+      "files": [
+        "frontend/src/pages/ValentineProposalPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-coherent-playful-valentine-themed-visual-design-colors-typography-spacing-and-layout-consistently-across-the-page-without-using-a-blue-purple-primary-palette",
+      "featureTitle": "Apply a coherent, playful Valentine-themed visual design (colors, typography, spacing, and layout) consistently across the page without using a blue/purple primary palette.",
+      "files": [
+        "frontend/index.css",
+        "frontend/src/index.css",
+        "frontend/src/pages/ValentineProposalPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-required-generated-images-into-the-app-as-static-assets-under-frontend-public-assets-generated-and-use-them-in-the-valentine-page-layout",
+      "featureTitle": "Add the required generated images into the app as static assets under frontend/public/assets/generated and use them in the Valentine page layout.",
+      "files": [
+        "frontend/src/pages/ValentineProposalPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
